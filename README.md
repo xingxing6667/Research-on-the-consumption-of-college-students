@@ -74,7 +74,7 @@ python analysis_pipeline.py
 | `daily_forecast.csv` | 测试集预测结果和未来预测结果 |
 | `elbow_method/cluster_evaluation.csv` | 不同聚类数下的评价指标 |
 
-主要图表保存在 `output/analysis/figures/` 和 `output/analysis/elbow_method/`。以下图片使用相对路径引用，在 GitHub README 预览界面中可以直接显示。
+主要图表保存在 `output/analysis/figures/` 和 `output/analysis/elbow_method/`。
 
 ### 描述性统计与问卷结果
 
