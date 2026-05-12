@@ -74,24 +74,47 @@ python analysis_pipeline.py
 | `daily_forecast.csv` | 测试集预测结果和未来预测结果 |
 | `elbow_method/cluster_evaluation.csv` | 不同聚类数下的评价指标 |
 
-主要图表保存在 `output/analysis/figures/` 和 `output/analysis/elbow_method/`。
+主要图表保存在 `output/analysis/figures/` 和 `output/analysis/elbow_method/`。以下图片使用相对路径引用，在 GitHub README 预览界面中可以直接显示。
 
-| 图表 | 路径 |
-|---|---|
-| 日度消费金额趋势 | `output/analysis/figures/daily_total_amount_trend.png` |
-| 问卷月消费占比最高项 | `output/analysis/figures/questionnaire_top_consumption_items.png` |
-| 消费画像群体人数分布 | `output/analysis/figures/cluster_distribution.png` |
-| 最终聚类 PCA 投影 | `output/analysis/figures/cluster_pca.png` |
-| 各画像群体餐次金额占比 | `output/analysis/figures/cluster_meal_share.png` |
-| 聚类中心特征热力图 | `output/analysis/figures/cluster_center_heatmap.png` |
-| SSE 肘部法则图 | `output/analysis/elbow_method/cluster_elbow_inertia.png` |
-| SSE 边际下降率图 | `output/analysis/elbow_method/cluster_inertia_drop_rate.png` |
-| 轮廓系数图 | `output/analysis/elbow_method/cluster_silhouette_score.png` |
-| CH 指数与 DB 指数图 | `output/analysis/elbow_method/cluster_validity_indices.png` |
-| 随机森林消费金额预测 | `output/analysis/figures/forecast_random_forest_total_amount_test.png` |
-| 随机森林交易笔数预测 | `output/analysis/figures/forecast_random_forest_transaction_count_test.png` |
-| LSTM 消费金额预测 | `output/analysis/figures/forecast_lstm_total_amount_test.png` |
-| LSTM 交易笔数预测 | `output/analysis/figures/forecast_lstm_transaction_count_test.png` |
+### 描述性统计与问卷结果
+
+![日度消费金额趋势](output/analysis/figures/daily_total_amount_trend.png)
+
+![问卷月消费占比最高项](output/analysis/figures/questionnaire_top_consumption_items.png)
+
+### 聚类数量选择
+
+![SSE 肘部法则图](output/analysis/elbow_method/cluster_elbow_inertia.png)
+
+![SSE 边际下降率图](output/analysis/elbow_method/cluster_inertia_drop_rate.png)
+
+![轮廓系数图](output/analysis/elbow_method/cluster_silhouette_score.png)
+
+![CH 指数与 DB 指数图](output/analysis/elbow_method/cluster_validity_indices.png)
+
+### 消费画像聚类结果
+
+![消费画像群体人数分布](output/analysis/figures/cluster_distribution.png)
+
+![最终聚类 PCA 投影](output/analysis/figures/cluster_pca.png)
+
+![各画像群体餐次金额占比](output/analysis/figures/cluster_meal_share.png)
+
+![聚类中心特征热力图](output/analysis/figures/cluster_center_heatmap.png)
+
+### 趋势预测结果
+
+![消费金额预测综合对比](output/analysis/figures/forecast_total_amount_test.png)
+
+![交易笔数预测综合对比](output/analysis/figures/forecast_transaction_count_test.png)
+
+![随机森林消费金额预测](output/analysis/figures/forecast_random_forest_total_amount_test.png)
+
+![随机森林交易笔数预测](output/analysis/figures/forecast_random_forest_transaction_count_test.png)
+
+![LSTM 消费金额预测](output/analysis/figures/forecast_lstm_total_amount_test.png)
+
+![LSTM 交易笔数预测](output/analysis/figures/forecast_lstm_transaction_count_test.png)
 
 ## 核心结果
 
@@ -120,4 +143,3 @@ LSTM 已纳入模型比较并生成独立预测图，但由于当前日度序列
 - 问卷数据为汇总统计结果，不能与学生个体消费流水一一匹配。
 - 当前趋势预测样本跨度有限，LSTM 结果应谨慎解释。
 - 若重新运行脚本，`output/analysis/` 下的结果文件和图表会按当前数据重新生成。
-
